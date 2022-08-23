@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --main-color-hover: #6be7db;
+
+  --secondary-color: #2c4755;
+  --secondary-color-hover: #415a66;
+
+  --red-color: #d9534f;
+  --red-color-hover: #d47471;
+
+  --yellow-color: #f0ad4e;
+  --yellow-color-hover: #f1be77;
+
+  --green-color: #4bbf73;
+  --green-color-hover: #85ce9e;
+
+  --main-border-radius: 3px;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+a:hover,
+a:active {
+  color: var(--secondary-color-hover);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+/* End Global Rules */
