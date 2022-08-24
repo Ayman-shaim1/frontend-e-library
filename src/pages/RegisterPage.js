@@ -3,7 +3,7 @@ import { Button, Center } from "../components";
 import {
   Form,
   FormInput,
-  FormInputGroupe,
+  FormInputGroup,
   FormInputIcon,
   FormLabel,
 } from "../components/Form";
@@ -23,36 +23,36 @@ const RegisterPage = () => {
         <hr />
 
         <FormLabel>Username</FormLabel>
-        <FormInputGroupe>
+        <FormInputGroup>
           <FormInputIcon>
             <i className="fa-solid fa-user"></i>
           </FormInputIcon>
           <FormInput placeholder="Enter username" />
-        </FormInputGroupe>
+        </FormInputGroup>
         <FormLabel>Email</FormLabel>
-        <FormInputGroupe>
+        <FormInputGroup>
           <FormInputIcon>
             <i className="fa-solid fa-envelope"></i>
           </FormInputIcon>
           <FormInput placeholder="Enter email" />
-        </FormInputGroupe>
+        </FormInputGroup>
         <FormLabel>Password</FormLabel>
-        <FormInputGroupe>
+        <FormInputGroup>
           <FormInputIcon>
             <i className="fa-solid fa-lock"></i>
           </FormInputIcon>
           <FormInput placeholder="Enter password" type="password" />
-        </FormInputGroupe>
+        </FormInputGroup>
         <FormLabel>Confirm Password</FormLabel>
-        <FormInputGroupe>
+        <FormInputGroup>
           <FormInputIcon>
             <i className="fa-solid fa-lock"></i>
           </FormInputIcon>
           <FormInput placeholder="Enter confirm password" type="password" />
-        </FormInputGroupe>
+        </FormInputGroup>
         <small>
-          <i className="fa-solid fa-warning text-main-color"></i> Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Quidem, quia!
+          <i className="fa-solid fa-warning text-main-color"></i> Lorem ipsum
+          dolor, sit amet consectetur adipisicing elit. Quidem, quia!
         </small>
         <Button type="submit" block className="my-1">
           <i className="fa-solid fa-user-plus"></i> Sign Up

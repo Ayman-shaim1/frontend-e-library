@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage, LoginPage, RegisterPage } from "./pages";
-import { Container, Toast } from "./components";
+import { Container, Toast, Header } from "./components";
 
 const App = () => {
   return (
     <Router>
+      <Header />
       <main>
         <Container>
           <Routes>

@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Center } from "../components";
 import {
   Form,
   FormInput,
-  FormInputGroupe,
+  FormInputGroup,
   FormInputIcon,
   FormLabel,
   FormCheck,
 } from "../components/Form";
 import { Link } from "react-router-dom";
 const LoginPage = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   const submitHandler = (e) => {
     e.preventDefault();
   };
-
+  const handleShowPassword = (event) => {
+    setShowPassword(event.target.checked);
+  };
   return (
     <Center className="my-5">
       <Form onSubmit={submitHandler}>
@@ -22,27 +26,35 @@ const LoginPage = () => {
         </Center>
         <hr />
         <FormLabel>Email</FormLabel>
-        <FormInputGroupe>
+        <FormInputGroup>
           <FormInputIcon>
             <i className="fa-solid fa-envelope"></i>
           </FormInputIcon>
           <FormInput placeholder="Enter email" />
-        </FormInputGroupe>
+        </FormInputGroup>
         <FormLabel>Password</FormLabel>
-        <FormInputGroupe>
+        <FormInputGroup>
           <FormInputIcon>
             <i className="fa-solid fa-lock"></i>
           </FormInputIcon>
-          <FormInput placeholder="Enter password" type="password" />
-        </FormInputGroupe>
-        <FormCheck label="hello world" />
-        <Button type="submit" block className="my-1">
+          <FormInput
+            placeholder="Enter password"
+            type={showPassword ? "text" : "password"}
+          />
+        </FormInputGroup>
+        <FormCheck
+          label="show password ?"
+          checked={showPassword}
+          onChange={handleShowPassword}
+        />
+
+        <Button type="submit" block className="mt-1">
           <i className="fa-solid fa-arrow-right-to-bracket"></i> Sign In
         </Button>
         <hr />
         <Center>
           <p>
-            New Customer ? &nbsp;<Link to="/register">Register</Link>
+            New Customer ? &nbsp;<Link to="/register">Sign Up</Link>
           </p>
         </Center>
       </Form>

@@ -18,7 +18,7 @@ const StyledDropdownMenu = styled.div`
   width: 100%;
   left: 0;
   background-color: #fff;
-  z-index: 100;
+  z-index: 1000;
   display: ${(props) => (props.show ? "flex" : "none")};
   transition: var(--main-duration);
 `;
