@@ -49,7 +49,7 @@ const LoginPage = () => {
         />
 
         <Button type="submit" block className="mt-1">
-          <i className="fa-solid fa-arrow-right-to-bracket"></i> Sign In
+          Sign In
         </Button>
         <hr />
         <Center>

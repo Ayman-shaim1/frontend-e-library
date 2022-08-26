@@ -128,7 +128,7 @@ const StyledFromSelectContainer = styled.div`
     position: absolute;
     display: inline-block;
     top: 17px;
-    right:18px;
+    right: 18px;
     color: gray;
   }
 `;
@@ -138,6 +138,7 @@ const StyledFormSelect = styled.select`
   --webkit-appearance: none;
   --moz-appearance: none;
   --ms-appearance: none;
+  user-select: none;
   width: 100%;
   padding: 18px 25px;
   background-color: #f7f7f9;

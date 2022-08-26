@@ -5,7 +5,8 @@ import { useState } from "react";
 const StyledDropdown = styled.div`
   user-select: none;
   position: relative;
-  width: 400px;
+  margin-left: 15px;
+  margin-right: 15px;
 `;
 
 const StyledDropdownMenu = styled.div`
@@ -15,6 +16,9 @@ const StyledDropdownMenu = styled.div`
   border: 1px solid lightgray;
   border-radius: var(--main-border-radius);
   position: absolute;
+  min-width:200px;
+  max-width:400px;
+
   width: 100%;
   left: 0;
   background-color: #fff;

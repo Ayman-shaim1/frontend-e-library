@@ -55,7 +55,7 @@ const RegisterPage = () => {
           dolor, sit amet consectetur adipisicing elit. Quidem, quia!
         </small>
         <Button type="submit" block className="my-1">
-          <i className="fa-solid fa-user-plus"></i> Sign Up
+          Sign Up
         </Button>
         <hr />
         <Center>
