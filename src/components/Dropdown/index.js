@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const StyledDropdown = styled.div`
   user-select: none;
@@ -16,14 +16,14 @@ const StyledDropdownMenu = styled.div`
   border: 1px solid lightgray;
   border-radius: var(--main-border-radius);
   position: absolute;
-  min-width:200px;
-  max-width:400px;
+  min-width: 200px;
+  max-width: 400px;
 
   width: 100%;
   left: 0;
   background-color: #fff;
   z-index: 1000;
-  display: ${(props) => (props.show ? "flex" : "none")};
+  display: ${props => (props.show ? "flex" : "none")};
   transition: var(--main-duration);
 `;
 const StyledDropdownToggle = styled.div`
@@ -55,13 +55,24 @@ DropdownItem.defaultProps = {
   to: "#",
 };
 export const Dropdown = ({ children, title }) => {
+  // states :
   const [show, setShow] = useState(false);
+  // ref's:
+  const dropdownToggleRef = useRef();
+
+  const handleClickOutside = e => {
+    if (dropdownToggleRef && !dropdownToggleRef.current.contains(e.target))
+      setShow(false);
+  };
+
   const toggleMenu = () => setShow(!show);
+  useEffect(() => document.addEventListener("click", handleClickOutside));
+
   return (
     <StyledDropdown>
-      <StyledDropdownToggle onClick={toggleMenu}>
+      <StyledDropdownToggle onClick={toggleMenu} ref={dropdownToggleRef}>
         <span>{title}</span>
-        <StyledDropdownIcon className="fa-solid fa-sort-down"></StyledDropdownIcon>
+        <StyledDropdownIcon className='fa-solid fa-sort-down'></StyledDropdownIcon>
       </StyledDropdownToggle>
       <StyledDropdownMenu show={show}>{children}</StyledDropdownMenu>
     </StyledDropdown>
