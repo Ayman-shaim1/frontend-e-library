@@ -3,11 +3,15 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
 import toastReducer from "./toast/toastReducer";
+import alertReducer from "./alert/alertReducer";
+import dialogReducer from "./dialog/dialogReducer";
 
 const initialState = {};
 
 const reducer = combineReducers({
   toast: toastReducer,
+  alert: alertReducer,
+  dialog: dialogReducer,
 });
 
 const store = createStore(

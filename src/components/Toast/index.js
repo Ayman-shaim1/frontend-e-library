@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {
   ToastContainer,
   ToastContent as StyledToastContent,
@@ -7,7 +7,7 @@ import {
   ToastInfoIcon,
 } from "./Toast.Elements";
 
-import { hideToast } from "../../redux/toast";
+import { Toast as UToast } from "../../utils";
 
 const types = [
   {
@@ -34,9 +34,9 @@ const types = [
   },
 ];
 
-const ToastContent = ({ toast, hideToast }) => {
+const ToastContent = ({ toast }) => {
   useEffect(() => {
-    setTimeout(() => hideToast(toast.id), 5000);
+    setTimeout(() => UToast.hide(toast.id), 5000);
   });
 
   return (
@@ -49,7 +49,7 @@ const ToastContent = ({ toast, hideToast }) => {
       </ToastInfoWrapper>
       <i
         className="fas fa-times cursor-pointer"
-        onClick={() => hideToast(toast.id)}
+        onClick={() => UToast.hide(toast.id)}
       ></i>
     </StyledToastContent>
   );
@@ -60,9 +60,8 @@ const Toast = () => {
   const toast = useSelector((state) => state.toast);
   const { toasts } = toast;
 
-  const dispatch = useDispatch();
   const hideToastHandler = (id) => {
-    dispatch(hideToast(id));
+    UToast.hide(id);
   };
 
   return (

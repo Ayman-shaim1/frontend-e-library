@@ -7,7 +7,7 @@ const openmodal = keyframes`
 
 const StyledModalOverlay = styled.div`
   position: fixed;
-  visibility: ${props => (props.show ? "visible" : "hidden")};
+  visibility: ${(props) => (props.show ? "visible" : "hidden")};
   width: 100%;
   height: 100%;
   top: 0;
@@ -19,7 +19,7 @@ const StyledModalOverlay = styled.div`
 `;
 
 const StyledModal = styled.div`
-  display: ${props => (props.show ? "block" : "none")};
+  display: ${(props) => (props.show ? "block" : "none")};
   padding: 18px;
   width: 95%;
   background-color: #fff;
@@ -46,11 +46,27 @@ const StyledModal = styled.div`
   }
 `;
 
+const StyledCloseModalContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const StyledCloseModal = styled.span`
+  color: gray;
+  cursor: pointer;
+`;
 export const Modal = ({ children, show, closeModal }) => {
   return (
     <>
       <StyledModalOverlay show={show} onClick={closeModal} />
-      <StyledModal show={show}>{children}</StyledModal>;
+      <StyledModal show={show}>
+        <StyledCloseModalContainer>
+          <StyledCloseModal onClick={closeModal}>
+            <i className="fas fa-times"></i>
+          </StyledCloseModal>
+        </StyledCloseModalContainer>
+        {children}
+      </StyledModal>
     </>
   );
 };

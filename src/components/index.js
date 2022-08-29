@@ -7,5 +7,28 @@ import Flex from "./Flex";
 import Grid from "./Grid";
 import Row from "./Row";
 import Column from "./Column";
+import Footer from "./Footer";
+import Alert from "./Alert";
+import Dialog from "./Dialog";
+import Card from "./Card";
+import Book from "./Book";
 
-export { Container, Button, Toast, Center, Header, Flex, Grid, Row, Column };
+import ButtonLink from "./ButtonLink";
+
+export {
+  Container,
+  Button,
+  Toast,
+  Center,
+  Header,
+  Flex,
+  Grid,
+  Row,
+  Column,
+  Footer,
+  Alert,
+  Dialog,
+  Card,
+  ButtonLink,
+  Book,
+};

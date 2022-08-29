@@ -45,6 +45,10 @@ a:active {
   color: var(--secondary-color-hover);
 }
 
+main {
+  min-height: calc(100vh - 220px);
+}
+
 .cursor-pointer {
   cursor: pointer;
 }

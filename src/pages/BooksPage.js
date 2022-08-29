@@ -1,17 +1,14 @@
 import React from "react";
-import { Row, Column } from "../components";
+import { Row, Column, Book } from "../components";
+import { books } from "../data";
 const BooksPage = () => {
   return (
     <Row>
-      <Column size={1}>
-        <div style={{ backgroundColor: "red", padding: "20px" }}></div>
-      </Column>
-      <Column size={3}>
-        <div style={{ backgroundColor: "blue", padding: "20px" }}></div>
-      </Column>
-      <Column size={1}>
-        <div style={{ backgroundColor: "green", padding: "20px" }}></div>
-      </Column>
+      {books.map((book) => (
+        <Column xl={4} lg={4} md={6} sm={12} key={book.id}>
+          <Book book={book} />
+        </Column>
+      ))}
     </Row>
   );
 };

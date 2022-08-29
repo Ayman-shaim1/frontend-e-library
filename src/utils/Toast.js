@@ -11,8 +11,8 @@ class Toast {
     );
   }
 
-  static hide() {
-    store.dispatch(hideToast());
+  static hide(id) {
+    store.dispatch(hideToast(id));
   }
 }
 
