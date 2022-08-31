@@ -12,8 +12,8 @@ import Alert from "./Alert";
 import Dialog from "./Dialog";
 import Card from "./Card";
 import Book from "./Book";
-
 import ButtonLink from "./ButtonLink";
+import Rating from "./Rating";
 
 export {
   Container,
@@ -31,4 +31,5 @@ export {
   Card,
   ButtonLink,
   Book,
+  Rating,
 };

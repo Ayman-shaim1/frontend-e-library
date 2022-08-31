@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Column = styled.div`
   float: left;
   width: 33.33%;
-  padding:5px;
+  padding: 5px 15px;
   @media (min-width: 120px) {
     width: 100%;
   }

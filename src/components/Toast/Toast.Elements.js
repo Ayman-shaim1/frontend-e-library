@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const ToastContainer = styled.div`
-  position: absolute;
-  bottom: 0;
+  position: fixed;
   user-select: none;
-  bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  bottom: 0;
 `;
 
 export const ToastContent = styled.div`
@@ -20,7 +19,7 @@ export const ToastContent = styled.div`
   align-items: center;
   display: flex;
   margin-bottom: 10px;
-  transition:var(--main-duration);
+  transition: var(--main-duration);
   @media (max-width: 468px) {
     width: 300px;
   }

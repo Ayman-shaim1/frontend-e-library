@@ -40,6 +40,10 @@ export const StyledDialogContent = styled.div`
   width: 500px;
   z-index: 10000;
   padding: 30px;
+
+  @media (max-width: 500px) {
+    width: 370px;
+  }
 `;
 
 export const DialogIconContainer = styled.div`

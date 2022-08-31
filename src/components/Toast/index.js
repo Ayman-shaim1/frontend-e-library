@@ -45,7 +45,7 @@ const ToastContent = ({ toast }) => {
     >
       <ToastInfoWrapper>
         {toast.type && types.find((ty) => ty.type === toast.type).icon}
-        <span>{toast.text}</span>
+        <span>{toast.message}</span>
       </ToastInfoWrapper>
       <i
         className="fas fa-times cursor-pointer"

@@ -25,7 +25,6 @@ const App = () => {
           </Routes>
         </Container>
       </main>
-
       <Toast />
       <Alert />
       <Dialog />

@@ -40,6 +40,10 @@ export const StyledAlertContent = styled.div`
   width: 500px;
   z-index: 10000;
   padding: 30px;
+
+  @media (max-width: 500px) {
+    width: 370px;
+  }
 `;
 
 export const AlertIconContainer = styled.div`
@@ -72,7 +76,7 @@ export const AlertTitle = styled.h2`
   margin: 5px 0 -10px 0;
 `;
 export const AlertParagraph = styled.p`
-  padding: 5px; 
+  padding: 5px;
   text-align: justify;
-  font-size:15px;
+  font-size: 15px;
 `;

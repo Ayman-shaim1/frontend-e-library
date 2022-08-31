@@ -2,11 +2,11 @@ import store from "../redux/store";
 import { showToast, hideToast } from "../redux/toast/";
 
 class Toast {
-  static show({ type, text }) {
+  static show({ type, message }) {
     store.dispatch(
       showToast({
         type,
-        text,
+        message,
       })
     );
   }

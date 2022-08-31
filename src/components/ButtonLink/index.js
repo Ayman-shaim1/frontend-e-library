@@ -4,9 +4,13 @@ const ButtonLink = styled(Link)`
   cursor: pointer;
   border: 1px solid var(--${(props) => props.color}-color);
   color: ${(props) => (props.outline ? `var(--${props.color}-color)` : "#fff")};
-  padding: 12px 25px;
+  ${(props) =>
+    props.small
+      ? " padding: 10px 25px; font-size: 12px; !important"
+      : " padding: 12px 25px; font-size: 15px;"};
+
   display: inline-block;
-  text-align:center;
+  text-align: center;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   background-color: ${(props) =>
@@ -14,7 +18,7 @@ const ButtonLink = styled(Link)`
   border-radius: var(--main-border-radius);
   transition: var(--main-duration);
   ${(props) => props.block && "width:100%"};
-  font-size: 15px;
+
   &:hover {
     color: #fff;
     transform: scale(0.99);

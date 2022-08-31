@@ -55,6 +55,7 @@ const StyledCloseModal = styled.span`
   color: gray;
   cursor: pointer;
 `;
+
 export const Modal = ({ children, show, closeModal }) => {
   return (
     <>

@@ -10,15 +10,15 @@ const HomePage = () => {
 
   const showToastHandler = () => {
     Toast.show({
-      type: "main",
-      text: "hello world " + cpt,
+      type: "success",
+      message: "hello world " + cpt,
     });
     setCpt(cpt + 1);
   };
 
   const showAlertHandler = () => {
     Alert.show({
-      type: "danger",
+      type: "warning",
       title: "Hello world",
       message: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas animi illum
       modi nobis provident perferendis, molestias, facilis alias maiores nisi

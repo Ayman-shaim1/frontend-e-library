@@ -8,6 +8,9 @@ export const books = [
         sed?`,
     poster: "/images/b1.png",
     prices: [{ "1-months": 4.99 }, { "2-months": 7.99 }, { "3-months": 12.99 }],
+    author: "John Doe",
+    rating: 4,
+    genre:"music",
   },
   {
     id: "19139b42-1219-4e12-978a-754c5ffc1577",
@@ -18,6 +21,9 @@ export const books = [
         sed?`,
     poster: "/images/b2.png",
     prices: [{ "1-months": 4.99 }, { "2-months": 7.99 }, { "3-months": 12.99 }],
+    author: "John Doe",
+    rating: 4,
+    genre:"music",
   },
   {
     id: "fb1aa21d-1a73-4ee6-aebd-82a8b130b7ad",
@@ -28,6 +34,9 @@ export const books = [
         sed?`,
     poster: "/images/b3.png",
     prices: [{ "1-months": 4.99 }, { "2-months": 7.99 }, { "3-months": 12.99 }],
+    author: "John Doe",
+    rating: 4,
+    genre:"music",
   },
   {
     id: "0bdbd52d-a89e-4698-84a5-2a6b2cb36e98",
@@ -38,5 +47,8 @@ export const books = [
         sed?`,
     poster: "/images/b4.png",
     prices: [{ "1-months": 4.99 }, { "2-months": 7.99 }, { "3-months": 12.99 }],
+    author: "John Doe",
+    rating: 4,
+    genre:"music",
   },
 ];
