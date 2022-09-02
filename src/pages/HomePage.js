@@ -10,7 +10,7 @@ const HomePage = () => {
 
   const showToastHandler = () => {
     Toast.show({
-      type: "success",
+      type: "danger",
       message: "hello world " + cpt,
     });
     setCpt(cpt + 1);

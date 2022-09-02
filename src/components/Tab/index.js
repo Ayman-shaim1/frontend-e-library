@@ -1,17 +1,20 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const StyledTab = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  width: 100%;
-  margin: 18px 0;
   position: relative;
-  border-bottom: 2px solid lightgray;
+  margin: 18px 0;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  ${(props) =>
+    props.type &&
+    props.type.toLowerCase() === "vertical" &&
+    "border:none; flex-direction:column;"}
 `;
 
 const StyeldTabItem = styled(Link)`
@@ -24,7 +27,9 @@ const StyeldTabItem = styled(Link)`
   color: #000;
   border-radius: var(--main-border-radius);
   font-size: 12px;
-  width: 100%;
+  ${(props) =>
+    props.type && props.type.toLowerCase() === "vertical" && "width: 100%;"};
+
   outline: none;
   &:hover {
     background-color: #f4f4f4;
@@ -39,12 +44,19 @@ const StyeldTabItem = styled(Link)`
   }
 `;
 
-export const Tab = ({ children }) => {
+export const Tab = ({ children, type }) => {
   const id = uuidv4();
-  return <StyledTab id={id}>{children}</StyledTab>;
+  console.log(type);
+  return (
+    <StyledTab id={id} type={type}>
+      {children}
+    </StyledTab>
+  );
 };
 
 export const TabItem = ({ to, children, onClick, ...otherProps }) => {
+  // states:
+  const [type, setType] = useState(null);
   // ref :
   const tabItemRef = useRef();
   const clickHandler = (e) => {
@@ -58,6 +70,12 @@ export const TabItem = ({ to, children, onClick, ...otherProps }) => {
     tabItemRef.current.setAttribute("active", true);
   };
 
+  useEffect(() => {
+    setType(tabItemRef.current.parentElement.getAttribute("type"));
+  }, [setType]);
+
+
+
   return (
     <StyeldTabItem
       {...otherProps}
@@ -65,6 +83,7 @@ export const TabItem = ({ to, children, onClick, ...otherProps }) => {
       onClick={clickHandler}
       className={`tab-item`}
       ref={tabItemRef}
+      type={type}
     >
       {children}
     </StyeldTabItem>

@@ -29,6 +29,7 @@ export const FormInput = styled.input`
   font-size: 1rem;
   color: #55595c;
   font-weight: 400;
+  border-radius: var(--main-border-radius);
   &::-webkit-input-placeholder {
     color: #adb5bd;
     font-size: 16px;
@@ -111,6 +112,7 @@ export const FormCheck = ({ label, ...otherProps }) => {
 export const FormInputGroup = styled.div`
   display: flex;
   margin: 7px 0px;
+  border-radius: var(--main-border-radius);
 `;
 
 export const FormInputIcon = styled.span`
@@ -143,12 +145,16 @@ const StyledFormSelect = styled.select`
   padding: 18px 25px;
   background-color: #f7f7f9;
   border: none;
+  border-radius: var(--main-border-radius);
   outline: none;
   font-size: 1rem;
   color: #55595c;
   font-weight: 400;
   & > option {
     font-size: 15px;
+  }
+  & > option:hover {
+    background-color: var(--main-color) !important;
   }
 `;
 

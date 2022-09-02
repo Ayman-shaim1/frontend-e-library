@@ -1,21 +1,29 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
+  padding-left: 15px;
   margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  @media (min-width: 576px) {
+    width: 540px;
+  }
 
   @media (min-width: 768px) {
-    width: 750px;
+    width: 720px;
   }
 
   @media (min-width: 992px) {
-    width: 970px;
+    width: 960px;
   }
 
   @media (min-width: 1200px) {
-    width: 1170px;
+    width: 1140px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 1320px;
   }
 `;
 

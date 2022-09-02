@@ -38,7 +38,7 @@ const BookPage = () => {
       <ButtonLink to="/books" color="secondary" outline>
         <i className="fa-solid fa-arrow-left-long"></i> Books
       </ButtonLink>
-      <Row>
+      <Row className="my-2">
         <Column xl={5} lg={5} md={12} sm={12}>
           <img src={book.poster} alt="book-poster" style={{ width: "100%" }} />
         </Column>
@@ -67,13 +67,13 @@ const BookPage = () => {
               ))}
             </tbody>
           </table>
-          <Button block className="mt-2">
+          <Button block className="my-2">
             read now
           </Button>
         </Column>
       </Row>
       <hr />
-      <Center>
+      <Center className="my-1">
         <h2 className="text-secondary-color">Related Book</h2>
       </Center>
       <Row>
