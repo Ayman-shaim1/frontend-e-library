@@ -49,7 +49,4 @@ main {
   min-height: calc(100vh - 220px);
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
 /* End Global Rules */
