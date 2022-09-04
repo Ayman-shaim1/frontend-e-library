@@ -16,11 +16,20 @@ const BooksPage = () => {
 
   return (
     <>
-      <Flex justifyContent='end'>
+      <Flex
+        justifyContent='space-between'
+        alignItems='center'
+        mdFlexDirection='column'>
+        <div>
+          <small>
+            <i className='fas fa-warning text-main-color'></i> Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Optio, at.
+          </small>
+        </div>
         <Form>
           <FormInputGroup>
             <FormInput placeholder='search for books ...' />
-            <Button>
+            <Button small>
               <i className='fas fa-search'></i>
             </Button>
           </FormInputGroup>
