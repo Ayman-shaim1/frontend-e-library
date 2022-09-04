@@ -19,7 +19,7 @@ const BooksPage = () => {
       <Flex justifyContent='end'>
         <Form>
           <FormInputGroup>
-            <FormInput placeholder='search for books by names ...' />
+            <FormInput placeholder='search for books ...' />
             <Button>
               <i className='fas fa-search'></i>
             </Button>
