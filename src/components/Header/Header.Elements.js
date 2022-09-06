@@ -48,16 +48,16 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   background-color: var(--main-color);
-  padding: 7px 20px;
   color: #fff;
+  height: var(--header-height);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 70px;
+  padding-right: 70px;
   justify-content: space-between;
   @media (max-width: 842px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 `;
 

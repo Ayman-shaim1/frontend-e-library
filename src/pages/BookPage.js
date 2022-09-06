@@ -77,7 +77,7 @@ const BookPage = () => {
       </Center>
       <Row>
         {books.map(book => (
-          <Column xl={4} lg={4} md={6} sm={12} key={book.id}>
+          <Column xl={3} lg={4} md={6} sm={12} key={book.id}>
             <Book book={book} />
           </Column>
         ))}

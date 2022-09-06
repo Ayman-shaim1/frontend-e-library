@@ -14,6 +14,8 @@ import Card from "./Card";
 import Book from "./Book";
 import ButtonLink from "./ButtonLink";
 import Rating from "./Rating";
+import GlobalLoading from "./GlobalLoading";
+import Loader from "./Loader";
 
 export {
   Container,
@@ -32,4 +34,6 @@ export {
   ButtonLink,
   Book,
   Rating,
+  GlobalLoading,
+  Loader,
 };

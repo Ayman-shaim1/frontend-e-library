@@ -17,20 +17,21 @@ const BooksPage = () => {
   return (
     <>
       <Flex
-        justifyContent='space-between'
-        alignItems='center'
-        mdFlexDirection='column'>
+        justifyContent="space-between"
+        alignItems="center"
+        mdFlexDirection="column"
+      >
         <div>
           <small>
-            <i className='fas fa-warning text-main-color'></i> Lorem ipsum dolor
+            <i className="fas fa-warning text-main-color"></i> Lorem ipsum dolor
             sit amet consectetur adipisicing elit. Optio, at.
           </small>
         </div>
         <Form>
           <FormInputGroup>
-            <FormInput placeholder='search for books ...' />
+            <FormInput placeholder="search for books ..." />
             <Button small>
-              <i className='fas fa-search'></i>
+              <i className="fas fa-search"></i>
             </Button>
           </FormInputGroup>
         </Form>
@@ -38,24 +39,25 @@ const BooksPage = () => {
       <hr />
       <Row>
         <Column xl={3} lg={3} md={12} sm={12}>
-          <Tab type='vertical'>
+          <Tab type="vertical">
             <TabItem active={"true"}>All genres</TabItem>
-            {genres.map(genre => (
+            {genres.map((genre) => (
               <TabItem key={genre}>{genre}</TabItem>
             ))}
           </Tab>
         </Column>
         <Column xl={9} lg={9} md={12} sm={12}>
           <>
-            <Row className='mt-1'>
-              {books.map(book => (
+            <Row className="mt-1">
+              {books.map((book) => (
                 <Column xl={4} lg={4} md={6} sm={12} key={book.id}>
                   <Book book={book} />
                 </Column>
               ))}
             </Row>
+            <hr />
             <Pagination>
-              <PageItem to='#'>
+              <PageItem to="#">
                 <span>&laquo;</span>
               </PageItem>
               <PageItem active={"true"}>1</PageItem>
@@ -63,7 +65,7 @@ const BooksPage = () => {
               <PageItem>3</PageItem>
               <PageItem>4</PageItem>
               <PageItem>5</PageItem>
-              <PageItem to='#'>
+              <PageItem to="#">
                 <span>&raquo;</span>
               </PageItem>
             </Pagination>
