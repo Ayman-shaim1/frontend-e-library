@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const Form = styled.form`
-  padding: 14px;
+export const FormContainer = styled.div`
   width: 100%;
   @media (min-width: 768px) {
     width: 100%;
@@ -14,6 +13,11 @@ export const Form = styled.form`
   @media (min-width: 1200px) {
     width: 50%;
   }
+`;
+
+export const Form = styled.form`
+  padding: 14px;
+  width: 100%;
 `;
 
 export const FormLabel = styled.label`
@@ -112,6 +116,7 @@ export const FormCheck = ({ label, ...otherProps }) => {
 export const FormInputGroup = styled.div`
   display: flex;
   margin: 7px 0px;
+  width: 100%;
   border-radius: var(--main-border-radius);
 `;
 

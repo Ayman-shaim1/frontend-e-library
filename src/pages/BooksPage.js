@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Row, Column, Book, Flex, Button } from "../components";
-import { Tab, TabItem } from "../components/Tab";
+
 import { Pagination, PageItem } from "../components/Pagination";
-import { Form, FormInput, FormInputGroup } from "../components/Form";
+import {
+  Form,
+  FormContainer,
+  FormInput,
+  FormInputGroup,
+} from "../components/Form";
 import { books } from "../data";
 
 const BooksPage = () => {
-  const [genres] = useState([
-    "Buisness",
-    "Science",
-    "Fiction",
-    "Philosophy",
-    "Biography",
-  ]);
+  // const [genres] = useState([
+  //   "Buisness",
+  //   "Science",
+  //   "Fiction",
+  //   "Philosophy",
+  //   "Biography",
+  // ]);
 
   return (
     <>
@@ -27,26 +32,20 @@ const BooksPage = () => {
             sit amet consectetur adipisicing elit. Optio, at.
           </small>
         </div>
-        <Form>
-          <FormInputGroup>
-            <FormInput placeholder="search for books ..." />
-            <Button small>
-              <i className="fas fa-search"></i>
-            </Button>
-          </FormInputGroup>
-        </Form>
+        <FormContainer>
+          <Form>
+            <FormInputGroup>
+              <FormInput placeholder="search for books ..." />
+              <Button small>
+                <i className="fas fa-search"></i>
+              </Button>
+            </FormInputGroup>
+          </Form>
+        </FormContainer>
       </Flex>
       <hr />
       <Row>
-        <Column xl={3} lg={3} md={12} sm={12}>
-          <Tab type="vertical">
-            <TabItem active={"true"}>All genres</TabItem>
-            {genres.map((genre) => (
-              <TabItem key={genre}>{genre}</TabItem>
-            ))}
-          </Tab>
-        </Column>
-        <Column xl={9} lg={9} md={12} sm={12}>
+        <Column xl={12} lg={12} md={12} sm={12}>
           <>
             <Row className="mt-1">
               {books.map((book) => (

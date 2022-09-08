@@ -1,23 +1,9 @@
 import React from "react";
-import { Button, ButtonLink, Center, Loader } from "../components";
-import { GlobalLoading } from "../utils/";
+import {  ButtonLink, Center } from "../components";
+
 const HomePage = () => {
   return (
     <>
-      <Center>
-        <Loader />
-      </Center>
-      <Button
-        className="my-1"
-        block
-        onClick={() => {
-          GlobalLoading.show();
-          setTimeout(GlobalLoading.hide, 5000);
-        }}
-      >
-        show loading
-      </Button>
-
       <section className="p-3 bg-main mb-2">
         <Center>
           <span className="mb-0" style={{ fontSize: "100px" }}>
