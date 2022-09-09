@@ -35,7 +35,7 @@ export const books = [
     poster: "/images/b3.png",
     prices: [{ "1-months": 4.99 }, { "2-months": 7.99 }, { "3-months": 12.99 }],
     author: "John Doe",
-    rating: 4,
+    rating: 5,
     genre:"music",
   },
   {
@@ -48,7 +48,7 @@ export const books = [
     poster: "/images/b4.png",
     prices: [{ "1-months": 4.99 }, { "2-months": 7.99 }, { "3-months": 12.99 }],
     author: "John Doe",
-    rating: 4,
+    rating: 3.5,
     genre:"music",
   },
 ];

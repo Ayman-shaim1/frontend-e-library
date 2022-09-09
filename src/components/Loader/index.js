@@ -1,10 +1,19 @@
 import styled, { keyframes } from "styled-components";
 
 const sizes = {
+  xs: "15px",
   sm: "30px",
   md: "100px",
   lg: "200px",
   xl: "300px",
+};
+
+const borderSizes = {
+  xs: "2px",
+  sm: "3px",
+  md: "4px",
+  lg: "5px",
+  xl: "6px",
 };
 
 const spin = keyframes`
@@ -13,13 +22,19 @@ const spin = keyframes`
 `;
 
 const Loader = styled.div`
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid var(--main-color);
+  border: ${(props) => props.size && borderSizes[props.size]} solid #f3f3f3;
+  border-top: ${(props) => props.size && borderSizes[props.size]} solid
+    ${(props) => props.color && `var(--${props.color}-color)`};
   border-radius: 50%;
   width: ${(props) => (props.size ? sizes[props.size] : "100px")};
   height: ${(props) => (props.size ? sizes[props.size] : "100px")};
   margin: 5px;
-  animation: ${spin} 2s linear infinite;
+  animation: ${spin} 1s linear infinite;
 `;
+
+Loader.defaultProps = {
+  size: "md",
+  color: "main",
+};
 
 export default Loader;

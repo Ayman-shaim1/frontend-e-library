@@ -218,6 +218,9 @@
 .text-yellow-color {
   color: var(--yellow-color);
 }
+.text-gray-color {
+  color: var(--gray-color);
+}
 .text-align-justify {
   text-align: justify;
 }
@@ -241,4 +244,8 @@
 .bg-yellow {
   color: #fff;
   background-color: var(--yellow-color);
+}
+.bg-gray {
+  color: #000;
+  background-color: var(--gray-color);
 }

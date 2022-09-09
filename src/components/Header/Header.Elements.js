@@ -21,7 +21,7 @@ const StyledHeaderLogoLink = styled(Link)`
 `;
 
 const StyledHeaderContentToggle = styled(Button)`
-  background-color: var(--main-color-hover);
+  background-color: var(--main-color-hover) !important;
   padding: 10px 20px;
   display: none;
   @media (max-width: 842px) {

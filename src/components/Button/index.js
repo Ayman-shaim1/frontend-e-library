@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import Loader from "../Loader";
 
-const Button = styled.button`
+const StyledButton = styled.button`
   cursor: pointer;
   border: 1px solid var(--${(props) => props.color}-color);
   color: ${(props) => (props.outline ? `var(--${props.color}-color)` : "#fff")};
@@ -25,6 +26,30 @@ const Button = styled.button`
     outline: none;
   }
 `;
+
+const StyledButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content:center;
+`;
+
+const Button = ({
+  children,
+  color,
+  outline,
+  block,
+  loading,
+  ...otherProps
+}) => {
+  return (
+    <StyledButton color={color} outline={outline} block={block} {...otherProps}>
+      <StyledButtonContainer>
+        {children}
+        {loading && <Loader size="xs" color="secondary" />}
+      </StyledButtonContainer>
+    </StyledButton>
+  );
+};
 
 Button.defaultProps = {
   color: "main",
