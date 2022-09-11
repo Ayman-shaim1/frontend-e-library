@@ -4,7 +4,7 @@ import RegisterPage from "./RegisterPage";
 import BooksPage from "./BooksPage";
 import BookPage from "./BookPage";
 import BookPageContentPage from "./BookPageContentPage";
-import ProfilePage from "./ProfilePage";
+
 import SettingsPage from "./SettingsPage";
 
 
@@ -15,6 +15,6 @@ export {
   BooksPage,
   BookPage,
   BookPageContentPage,
-  ProfilePage,
+
   SettingsPage,
 };

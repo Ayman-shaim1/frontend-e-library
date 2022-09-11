@@ -7,7 +7,7 @@ import {
   BooksPage,
   BookPage,
   BookPageContentPage,
-  ProfilePage,
+
   SettingsPage,
 } from "./pages";
 import {
@@ -38,7 +38,7 @@ const App = () => {
               path="/Book/:id/pages/:page"
               element={<BookPageContentPage />}
             />
-            <Route exact path="/Profile" element={<ProfilePage />} />
+       
             <Route exact path="/Settings" element={<SettingsPage />} />
           </Routes>
         </Container>

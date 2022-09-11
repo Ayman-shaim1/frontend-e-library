@@ -15,7 +15,7 @@ const StyledTabButton = styled.span`
   display: block;
   padding: 12px 15px;
   font-size: 12px;
-  margin: 5px;
+  margin: 15px 5px;
   border-radius: var(--main-border-radius);
   cursor: pointer;
   user-select: none;

@@ -92,11 +92,6 @@ const Header = () => {
                     </>
                   }>
                   <HeaderDropdownItem
-                    to='/Profile'
-                    closeHeaderContent={closeHeaderContentHandler}>
-                    <i className='fa-solid fa-address-card'></i> Profile
-                  </HeaderDropdownItem>
-                  <HeaderDropdownItem
                     to='/Settings'
                     closeHeaderContent={closeHeaderContentHandler}>
                     <i className='fa-solid fa-gear'></i> Settings
